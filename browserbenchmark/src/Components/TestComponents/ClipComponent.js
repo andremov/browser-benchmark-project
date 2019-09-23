@@ -4,9 +4,9 @@ import {defTimer} from "../MainComponent";
 
 let attempts = 3;
 let style = false;
-let test = ' shadow';
+let test = ' clip';
 
-export class DropShadowComponent extends Component {
+export class ClipComponent extends Component {
 
     constructor(props, context) {
         super(props, context);

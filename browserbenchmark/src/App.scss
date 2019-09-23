@@ -78,10 +78,14 @@ a {
 }
 
 
-.drop-shadow {
+.shadow {
   box-shadow: 10px 10px 10px white;
 }
 
 .translate {
   transform: translate(120px,250px);
+}
+
+.clip {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
 }

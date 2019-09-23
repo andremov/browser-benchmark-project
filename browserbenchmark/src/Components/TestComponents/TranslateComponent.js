@@ -25,6 +25,8 @@ export class TranslateComponent extends Component {
         if (attempts !== 0) {
             setTimeout(this.swapStyle, defTimer);
         }
+
+        this.forceUpdate();
     };
 
     render() {

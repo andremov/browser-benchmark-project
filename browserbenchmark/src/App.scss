@@ -14,6 +14,35 @@ body {
   font-size: calc(10px + 2vmin);
   color: white;
   padding-bottom: 10px;
+
+  .title {
+    font-size: 1.8em;
+  }
+}
+
+
+.devs {
+  position: absolute;
+  display: block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  color: #191c21;
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  .year {
+    color: #09d3ac;
+    font-size: 0.75em;
+  }
+
+  .names {
+    font-size: 0.8em;
+  }
 }
 
 .bar {
@@ -47,10 +76,6 @@ body {
   &:hover{
     background-color: #39ffdc;
    }
-}
-
-.title {
-  font-size: 1.8em;
 }
 
 a {

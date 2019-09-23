@@ -99,6 +99,12 @@ export class MainComponent extends Component {
                     <div className='progress'>
                     </div>
                 </div>
+
+                <div className='devs'>
+                    <span className='title'>Desarrollado por:</span>
+                    <span className='names'>Mario Donato, Jose Luis Martinez, y Andrés Movilla.</span>
+                    <span className='year'>2019.</span>
+                </div>
             </div>
         );
     }

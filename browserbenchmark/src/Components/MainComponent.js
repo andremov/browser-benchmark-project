@@ -7,9 +7,15 @@ import {ClipComponent} from "./TestComponents/ClipComponent";
 import {ClipShadowComponent} from "./TestComponents/ClipShadowComponent";
 import {ScaleClipComponent} from "./TestComponents/ScaleClipComponent";
 import {ScaleComponent} from "./TestComponents/ScaleComponent";
+import {ScaleClipShadowComponent} from "./TestComponents/ScaleClipShadowComponent";
+import {BackgroundComponent} from "./TestComponents/BackgroundComponent";
+import {BackgroundScaleComponent} from "./TestComponents/BackgroundScaleComponent";
+import {BackgroundClipScaleComponent} from "./TestComponents/BackgroundClipScaleComponent";
+import {BackgroundClipScaleShadowComponent} from "./TestComponents/BackgroundClipScaleShadowComponent";
 export const defTimer = 2000;
 export const testAttempts = 3;
 
+const skip = 8;
 const testLength = 15;
 const tests = [
     {
@@ -61,6 +67,30 @@ const tests = [
         titled : true
     },
     {
+        name : 'Background Test',
+        comp : <BackgroundComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Background + Scale Test',
+        comp : <BackgroundScaleComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Background + Scale + Clip Path Test',
+        comp : <BackgroundClipScaleComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Background + Scale + Clip Path + Shadow Test',
+        comp : <BackgroundClipScaleShadowComponent />,
+        timed : true,
+        titled : true
+    },
+    {
         name : '',
         comp : <End />,
         timed : false,
@@ -102,6 +132,9 @@ export class MainComponent extends Component {
     };
 
     setTestNumber = (test) => {
+        if (test === 1) {
+            test = skip;
+        }
         this.setState({
             progress : 0,
             currentTest : test

@@ -40,8 +40,15 @@ body {
     font-size: 0.75em;
   }
 
+  .title {
+    line-height: 1.1;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
   .names {
     font-size: 0.8em;
+    line-height: 0.9;
   }
 }
 
@@ -119,5 +126,27 @@ a {
 }
 
 .scale {
-  transform: translate(1.2);
+  transform: scale(1.2);
+}
+
+@keyframes bkg-animation {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.bkg {
+  background-size: 200% 200%;
+  background-position: 200% 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top right, transparent 25%, white 25%, white 75%, transparent 75%);
+
+  animation-name: bkg-animation;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }

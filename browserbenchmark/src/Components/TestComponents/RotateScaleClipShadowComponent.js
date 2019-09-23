@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 
 import {defTimer, testAttempts} from "../MainComponent";
 
-export class DropShadowComponent extends Component {
+export class RotateScaleClipShadowComponent extends Component {
 
     state = {
         attempts : testAttempts,
         style : false,
-        testString : ' shadow'
+        testStringOuter : ' shadow',
+        testStringInner : ' rotatescale'
     };
 
     constructor(props, context) {
@@ -34,11 +35,13 @@ export class DropShadowComponent extends Component {
     };
 
     render() {
-        const {style, testString} = this.state;
+        const {style, testStringOuter, testStringInner} = this.state;
 
         return (
             <div className="test">
-                <div className={'object'+(style? testString : '')}>
+                <div className={'transition-object'+(style? testStringOuter : '')}>
+                    <div className={'object clip'+(style? testStringInner : '')}>
+                    </div>
                 </div>
             </div>
         );

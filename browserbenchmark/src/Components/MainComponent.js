@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import {Start} from "./Start";
-import {DropShadowTestComponent} from "./DropShadowTestComponent";
+import {DropShadowComponent} from "./TestComponents/DropShadowComponent";
+import {End} from "./End";
+import {TranslateComponent} from "./TestComponents/TranslateComponent";
+export const defTimer = 2500;
 
+const testLength = 15;
 const tests = [
     {
       name : ''
@@ -9,6 +13,12 @@ const tests = [
     {
         name : 'Drop Shadow Test',
     },
+    {
+        name : 'TranslateComponent Test',
+    },
+    {
+        name : ''
+    }
 ];
 
 export class MainComponent extends Component {
@@ -25,10 +35,10 @@ export class MainComponent extends Component {
     handleProgress = () => {
         let p = this.state.progress;
         let t = this.state.currentTest;
-        if (t !== 0) {
-            if (p === 100) {
+        if (t !== 0 && t !== tests.length-1) {
+            if (p >= testLength) {
                 t++;
-                p = 0;
+                p = -1;
             }
             this.setState({
                 progress: p + 1,
@@ -40,7 +50,15 @@ export class MainComponent extends Component {
     firstTest = () => {
         let t = this.state.currentTest;
         this.setState({
+            progress : 0,
             currentTest : t+1
+        });
+    };
+
+    restart = () => {
+        this.setState({
+            progress : 0,
+            currentTest : 0
         });
     };
 
@@ -51,7 +69,7 @@ export class MainComponent extends Component {
             <div>
                 <div className='header'>
                     <span className='title'>Browser Benchmark</span>
-                    {t !== 0 ?
+                    {t !== 0 && t !== tests.length-1 ?
                         <span className='subtitle'>{t + '. ' + tests[t].name}</span> :
                         ''
                     }
@@ -59,11 +77,12 @@ export class MainComponent extends Component {
 
                 {
                     t === 0 ? <Start doStart={this.firstTest}/> :
-                        t === 1 ? <DropShadowTestComponent /> :
-                            <Start />
+                        t === 1 ? <DropShadowComponent /> :
+                            t === 2 ? <TranslateComponent /> :
+                            <End doEnd={this.restart}/>
                 }
 
-                <div className='bar' style={{"width" : (((p/30)*100)+'%')}}>
+                <div className='bar' style={{"width" : (((p/testLength)*100)+'%')}}>
                     <div className='progress'>
                     </div>
                 </div>

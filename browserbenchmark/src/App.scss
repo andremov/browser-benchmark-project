@@ -3,6 +3,9 @@ body {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
@@ -24,24 +27,11 @@ body {
 
   transition: 1.0s;
   transition-timing-function: linear;
-}
 
-.progress {
-  background-color: #09d3ac;
-  height: 50px;
-
-}
-
-.test {
-  text-align: center;
-  background-color: #191c21;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  .progress {
+    background-color: #09d3ac;
+    height: 50px;
+  }
 }
 
 .btn {
@@ -66,4 +56,32 @@ body {
 a {
   text-decoration: none;
   color: white;
+}
+
+.test {
+  text-align: center;
+  background-color: #191c21;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  .object {
+    background-color: #ff9d3b;
+    width: 100px;
+    height: 100px;
+    transition: 0.5s;
+  }
+}
+
+
+.drop-shadow {
+  box-shadow: 10px 10px 10px white;
+}
+
+.translate {
+  transform: translate(120px,250px);
 }

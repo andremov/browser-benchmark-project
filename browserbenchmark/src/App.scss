@@ -102,9 +102,12 @@ a {
   }
 }
 
+.transition-object {
+  transition: 0.5s;
+}
 
 .shadow {
-  box-shadow: 10px 10px 10px white;
+  filter: drop-shadow( 10px 10px 10px white);
 }
 
 .translate {

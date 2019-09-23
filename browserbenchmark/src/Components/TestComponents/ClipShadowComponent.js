@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {defTimer, testAttempts} from "../MainComponent";
 
-export class DropShadowComponent extends Component {
+export class ClipShadowComponent extends Component {
 
     state = {
         attempts : testAttempts,
@@ -38,7 +38,9 @@ export class DropShadowComponent extends Component {
 
         return (
             <div className="test">
-                <div className={'object'+(style? testString : '')}>
+                <div className={'transition-object'+(style? testString : '')}>
+                    <div className='object clip'>
+                    </div>
                 </div>
             </div>
         );

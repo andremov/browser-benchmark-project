@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 
-import {defTimer} from "../MainComponent";
-
-let attempts = 3;
-let style = false;
-let test = ' clip';
+import {defTimer, testAttempts} from "../MainComponent";
 
 export class ClipComponent extends Component {
+
+    state = {
+        attempts : testAttempts,
+        style : false,
+        testString : ' clip'
+    };
 
     constructor(props, context) {
         super(props, context);
@@ -15,7 +17,7 @@ export class ClipComponent extends Component {
     }
 
     swapStyle = () => {
-
+        let {style, attempts} = this.state;
         style = !style;
 
         if (!style) {
@@ -26,13 +28,17 @@ export class ClipComponent extends Component {
             setTimeout(this.swapStyle, defTimer);
         }
 
-        this.forceUpdate();
+        this.setState( {
+            style, attempts
+        })
     };
 
     render() {
+        const {style, testString} = this.state;
+
         return (
             <div className="test">
-                <div className={'object'+(style? test : '')}>
+                <div className={'object'+(style? testString : '')}>
                 </div>
             </div>
         );

@@ -4,7 +4,9 @@ import {DropShadowComponent} from "./TestComponents/DropShadowComponent";
 import {End} from "./End";
 import {TranslateComponent} from "./TestComponents/TranslateComponent";
 import {ClipComponent} from "./TestComponents/ClipComponent";
+import {ClipShadowComponent} from "./TestComponents/ClipShadowComponent";
 export const defTimer = 2000;
+export const testAttempts = 3;
 
 const testLength = 15;
 const tests = [
@@ -29,6 +31,12 @@ const tests = [
     {
         name : 'Clip Path Test',
         comp : <ClipComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Clip + Drop Shadow Path Test',
+        comp : <ClipShadowComponent />,
         timed : true,
         titled : true
     },

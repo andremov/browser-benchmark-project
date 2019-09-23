@@ -4,7 +4,7 @@ export class End extends Component {
     action = event => {
         event.preventDefault();
 
-        this.props.doEnd();
+        window.mainComponent.setTestNumber(0);
     };
 
     render() {

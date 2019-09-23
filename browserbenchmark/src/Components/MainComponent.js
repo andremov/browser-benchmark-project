@@ -3,21 +3,40 @@ import {Start} from "./Start";
 import {DropShadowComponent} from "./TestComponents/DropShadowComponent";
 import {End} from "./End";
 import {TranslateComponent} from "./TestComponents/TranslateComponent";
-export const defTimer = 2500;
+import {ClipComponent} from "./TestComponents/ClipComponent";
+export const defTimer = 2000;
 
 const testLength = 15;
 const tests = [
     {
-      name : ''
+      name : '',
+        comp : <Start />,
+        timed : false,
+        titled : false
     },
     {
         name : 'Drop Shadow Test',
+        comp : <DropShadowComponent />,
+        timed : true,
+        titled : true
     },
     {
-        name : 'TranslateComponent Test',
+        name : 'Translate Test',
+        comp : <TranslateComponent />,
+        timed : true,
+        titled : true
     },
     {
-        name : ''
+        name : 'Clip Path Test',
+        comp : <ClipComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : '',
+        comp : <End />,
+        timed : false,
+        titled : false
     }
 ];
 
@@ -28,6 +47,13 @@ export class MainComponent extends Component {
         progress : 0
     };
 
+    constructor(props, context) {
+        super(props, context);
+
+        window.mainComponent = this;
+
+    }
+
     componentDidMount() {
         setInterval(this.handleProgress,1000)
     }
@@ -35,7 +61,7 @@ export class MainComponent extends Component {
     handleProgress = () => {
         let p = this.state.progress;
         let t = this.state.currentTest;
-        if (t !== 0 && t !== tests.length-1) {
+        if (tests[t].timed) {
             if (p >= testLength) {
                 t++;
                 p = -1;
@@ -47,18 +73,10 @@ export class MainComponent extends Component {
         }
     };
 
-    firstTest = () => {
-        let t = this.state.currentTest;
+    setTestNumber = (test) => {
         this.setState({
             progress : 0,
-            currentTest : t+1
-        });
-    };
-
-    restart = () => {
-        this.setState({
-            progress : 0,
-            currentTest : 0
+            currentTest : test
         });
     };
 
@@ -69,18 +87,13 @@ export class MainComponent extends Component {
             <div>
                 <div className='header'>
                     <span className='title'>Browser Benchmark</span>
-                    {t !== 0 && t !== tests.length-1 ?
+                    {tests[t].titled ?
                         <span className='subtitle'>{t + '. ' + tests[t].name}</span> :
                         ''
                     }
                 </div>
 
-                {
-                    t === 0 ? <Start doStart={this.firstTest}/> :
-                        t === 1 ? <DropShadowComponent /> :
-                            t === 2 ? <TranslateComponent /> :
-                            <End doEnd={this.restart}/>
-                }
+                {tests[t].comp}
 
                 <div className='bar' style={{"width" : (((p/testLength)*100)+'%')}}>
                     <div className='progress'>

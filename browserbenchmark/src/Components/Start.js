@@ -4,7 +4,7 @@ export class Start extends Component {
     action = event => {
         event.preventDefault();
 
-        this.props.doStart();
+        window.mainComponent.setTestNumber(1);
     };
 
     render() {

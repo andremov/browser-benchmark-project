@@ -1,0 +1,69 @@
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-bottom: 10px;
+}
+
+.bar {
+  position: absolute;
+  display: block;
+  height: 50px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+
+  transition: 1.0s;
+  transition-timing-function: linear;
+}
+
+.progress {
+  background-color: #09d3ac;
+  height: 50px;
+
+}
+
+.test {
+  text-align: center;
+  background-color: #191c21;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.btn {
+  margin-top: 6vh;
+  background-color: #09d3ac;
+  padding: 1%;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+
+  &:hover{
+    background-color: #39ffdc;
+   }
+}
+
+.title {
+  font-size: 1.8em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

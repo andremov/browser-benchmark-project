@@ -10,8 +10,8 @@ import {ScaleComponent} from "./TestComponents/ScaleComponent";
 import {ScaleClipShadowComponent} from "./TestComponents/ScaleClipShadowComponent";
 import {BackgroundComponent} from "./TestComponents/BackgroundComponent";
 import {BackgroundScaleComponent} from "./TestComponents/BackgroundScaleComponent";
-import {BackgroundClipScaleComponent} from "./TestComponents/BackgroundClipScaleComponent";
-import {BackgroundClipScaleShadowComponent} from "./TestComponents/BackgroundClipScaleShadowComponent";
+import {BackgroundScaleClipComponent} from "./TestComponents/BackgroundScaleClipComponent";
+import {BackgroundScaleClipShadowComponent} from "./TestComponents/BackgroundScaleClipShadowComponent";
 import {RotateComponent} from "./TestComponents/RotateComponent";
 import {RotateScaleComponent} from "./TestComponents/RotateScaleComponent";
 import {RotateScaleClipComponent} from "./TestComponents/RotateScaleClipComponent";
@@ -29,18 +29,22 @@ const tests = [
         timed : false,
         titled : false
     },
+    // SHADOW
     {
         name : 'Drop Shadow Test',
         comp : <ShadowComponent />,
         timed : true,
         titled : true
     },
+    /*
     {
         name : 'Translate Test',
         comp : <TranslateComponent />,
         timed : true,
         titled : true
-    },
+     },
+     */
+    // CLIP
     {
         name : 'Clip Path Test',
         comp : <ClipComponent />,
@@ -53,6 +57,7 @@ const tests = [
         timed : true,
         titled : true
     },
+    // SCALE
     {
         name : 'Scale Test',
         comp : <ScaleComponent />,
@@ -60,17 +65,18 @@ const tests = [
         titled : true
     },
     {
-        name : 'Clip + Scale Test',
+        name : 'Scale + Clip Test',
         comp : <ScaleClipComponent />,
         timed : true,
         titled : true
     },
     {
-        name : 'Clip + Scale + Shadow Test',
+        name : 'Scale + Clip + Shadow Test',
         comp : <ScaleClipShadowComponent />,
         timed : true,
         titled : true
     },
+    // BACKGROUND
     {
         name : 'Background Test',
         comp : <BackgroundComponent />,
@@ -85,16 +91,17 @@ const tests = [
     },
     {
         name : 'Background + Scale + Clip Test',
-        comp : <BackgroundClipScaleComponent />,
+        comp : <BackgroundScaleClipComponent />,
         timed : true,
         titled : true
     },
     {
         name : 'Background + Scale + Clip + Shadow Test',
-        comp : <BackgroundClipScaleShadowComponent />,
+        comp : <BackgroundScaleClipShadowComponent />,
         timed : true,
         titled : true
     },
+    // ROTATE
     {
         name : 'Rotate Test',
         comp : <RotateComponent />,

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {defTimer, testAttempts} from "../MainComponent";
 
-export class BackgroundClipScaleShadowComponent extends Component {
+export class BackgroundScaleClipShadowComponent extends Component {
 
     state = {
         attempts : testAttempts,

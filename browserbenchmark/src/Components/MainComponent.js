@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Start} from "./Start";
-import {DropShadowComponent} from "./TestComponents/DropShadowComponent";
 import {End} from "./End";
+import {DropShadowComponent} from "./TestComponents/DropShadowComponent";
 import {TranslateComponent} from "./TestComponents/TranslateComponent";
 import {ClipComponent} from "./TestComponents/ClipComponent";
 import {ClipShadowComponent} from "./TestComponents/ClipShadowComponent";
+import {ScaleClipComponent} from "./TestComponents/ScaleClipComponent";
+import {ScaleComponent} from "./TestComponents/ScaleComponent";
 export const defTimer = 2000;
 export const testAttempts = 3;
 
@@ -35,8 +37,26 @@ const tests = [
         titled : true
     },
     {
-        name : 'Clip + Drop Shadow Path Test',
+        name : 'Clip Path + Drop Shadow Test',
         comp : <ClipShadowComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Scale Test',
+        comp : <ScaleComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Clip Path + Scale Test',
+        comp : <ScaleClipComponent />,
+        timed : true,
+        titled : true
+    },
+    {
+        name : 'Clip Path + Scale + Shadow Test',
+        comp : <ScaleClipShadowComponent />,
         timed : true,
         titled : true
     },

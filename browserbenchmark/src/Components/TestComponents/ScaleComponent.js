@@ -40,7 +40,7 @@ export class ScaleComponent extends Component {
         return (
             <div className="test">
                 <div className={'transition-object'+(style? testStringOuter : '')}>
-                    <div className={'object clip'+(style? testStringInner : '')}>
+                    <div className={'object '+(style? testStringInner : '')}>
                     </div>
                 </div>
             </div>

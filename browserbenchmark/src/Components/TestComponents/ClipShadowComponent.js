@@ -7,7 +7,8 @@ export class ClipShadowComponent extends Component {
     state = {
         attempts : testAttempts,
         style : false,
-        testString : ' shadow'
+        testStringOuter : ' shadow',
+        testStringInner : ' '
     };
 
     constructor(props, context) {
@@ -34,12 +35,12 @@ export class ClipShadowComponent extends Component {
     };
 
     render() {
-        const {style, testString} = this.state;
+        const {style, testStringOuter, testStringInner} = this.state;
 
         return (
             <div className="test">
-                <div className={'transition-object'+(style? testString : '')}>
-                    <div className='object clip'>
+                <div className={'transition-object'+(style? testStringOuter : '')}>
+                    <div className={'object clip'+(style? testStringInner : '')}>
                     </div>
                 </div>
             </div>

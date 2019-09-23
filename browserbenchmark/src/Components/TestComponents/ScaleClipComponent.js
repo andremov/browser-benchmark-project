@@ -7,7 +7,8 @@ export class ScaleClipComponent extends Component {
     state = {
         attempts : testAttempts,
         style : false,
-        testString : ' scale'
+        testStringOuter : ' ',
+        testStringInner : ' scale'
     };
 
     constructor(props, context) {
@@ -34,11 +35,13 @@ export class ScaleClipComponent extends Component {
     };
 
     render() {
-        const {style, testString} = this.state;
+        const {style, testStringOuter, testStringInner} = this.state;
 
         return (
             <div className="test">
-                <div className={'object clip'+(style? testString : '')}>
+                <div className={'transition-object'+(style? testStringOuter : '')}>
+                    <div className={'object clip'+(style? testStringInner : '')}>
+                    </div>
                 </div>
             </div>
         );

@@ -150,3 +150,11 @@ a {
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
+
+.rotate {
+  transform: rotate(225deg);
+}
+
+.scalerotate {
+  transform: scale(1.2) rotate(225deg);
+}

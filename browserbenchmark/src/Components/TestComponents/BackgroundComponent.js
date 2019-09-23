@@ -7,7 +7,8 @@ export class BackgroundComponent extends Component {
     state = {
         attempts : testAttempts,
         style : false,
-        testString : ' bkg'
+        testStringOuter : ' ',
+        testStringInner : ' bkg'
     };
 
     constructor(props, context) {
@@ -34,11 +35,13 @@ export class BackgroundComponent extends Component {
     };
 
     render() {
-        const {style, testString} = this.state;
+        const {style, testStringOuter, testStringInner} = this.state;
 
         return (
             <div className="test">
-                <div className={'object'+(style? testString : '')}>
+                <div className={'transition-object'+(style? testStringOuter : '')}>
+                    <div className={'object '+(style? testStringInner : '')}>
+                    </div>
                 </div>
             </div>
         );

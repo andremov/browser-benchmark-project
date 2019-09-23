@@ -1,4 +1,4 @@
 [build]
   command = "npm run build"
-  publish="christmaseve/build"
-  base = "christmaseve"
+  publish="browserbenchmark/build"
+  base = "browserbenchmark"

@@ -63,46 +63,58 @@ export class TestComponent extends Component {
                             :
                             <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
                     }
-
-                    {
-                        doMulti ?
-                            (
-                                !doCat?
-                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
-                                    </div>
-                                    :
-                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
-                            )
-                            :
-                            ''
-                    }
-
-                    {
-                        doMulti ?
-                            (
-                                !doCat?
-                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
-                                    </div>
-                                    :
-                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
-                            )
-                            :
-                            ''
-                    }
-
-                    {
-                        doMulti ?
-                            (
-                                !doCat?
-                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
-                                    </div>
-                                    :
-                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
-                            )
-                            :
-                            ''
-                    }
                 </div>
+
+                {
+                    doMulti ?
+                        (
+                            <div className={'transition-object'+(style? testStringOuter : '')}>
+                                {
+                                    !doCat?
+                                        <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                        </div>
+                                        :
+                                        <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                                }
+                            </div>
+                        )
+                            :
+                            ''
+                }
+
+                {
+                    doMulti ?
+                        (
+                            <div className={'transition-object'+(style? testStringOuter : '')}>
+                                {
+                                    !doCat?
+                                        <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                        </div>
+                                        :
+                                        <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                                }
+                            </div>
+                        )
+                        :
+                        ''
+                }
+
+                {
+                    doMulti ?
+                        (
+                            <div className={'transition-object'+(style? testStringOuter : '')}>
+                                {
+                                    !doCat?
+                                        <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                        </div>
+                                        :
+                                        <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                                }
+                            </div>
+                        )
+                        :
+                        ''
+                }
             </div>
         );
     }

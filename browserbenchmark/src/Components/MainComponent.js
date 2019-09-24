@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {TestComponent} from "./TestComponent";
 import {testDB} from "../testDataSrc";
 
-export const defTimer = 2000;
+export const defTimer = 1500;
 export const testAttempts = 3;
 
 const skip = 1;
-const testLength = 15;
+const testLength = 10;
 
 export class MainComponent extends Component {
 

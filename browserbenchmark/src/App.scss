@@ -126,7 +126,15 @@ a {
 }
 
 .scale {
-  transform: scale(5.7);
+  transform: scale(4.7);
+}
+
+.rotate {
+  transform: rotate(375deg);
+}
+
+.rotatescale {
+  transform: scale(4.7) rotate(375deg);
 }
 
 @keyframes bkg-animation {
@@ -142,19 +150,11 @@ a {
   background-size: 200% 200%;
   background-position: 200% 0;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to top right, transparent 25%, #d36a4e 25%, #d36a4e 75%, transparent 75%);
+  background-image: linear-gradient(to top right, transparent 25%, #d35548 25%, #d35548 75%, transparent 75%);
 
   animation-name: bkg-animation;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-duration: 0.5s;
   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-
-.rotate {
-  transform: rotate(1000deg);
-}
-
-.rotatescale {
-  transform: scale(5.7) rotate(1000deg);
 }

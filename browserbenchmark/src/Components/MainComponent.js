@@ -1,22 +1,7 @@
 import React, {Component} from 'react';
 import {Start} from "./Start";
 import {End} from "./End";
-import {ShadowComponent} from "./TestComponents/ShadowComponent";
-import {TranslateComponent} from "./TestComponents/TranslateComponent";
-import {ClipComponent} from "./TestComponents/ClipComponent";
-import {ClipShadowComponent} from "./TestComponents/ClipShadowComponent";
-import {ScaleClipComponent} from "./TestComponents/ScaleClipComponent";
-import {ScaleComponent} from "./TestComponents/ScaleComponent";
-import {ScaleClipShadowComponent} from "./TestComponents/ScaleClipShadowComponent";
-import {BackgroundComponent} from "./TestComponents/BackgroundComponent";
-import {BackgroundScaleComponent} from "./TestComponents/BackgroundScaleComponent";
-import {BackgroundScaleClipComponent} from "./TestComponents/BackgroundScaleClipComponent";
-import {BackgroundScaleClipShadowComponent} from "./TestComponents/BackgroundScaleClipShadowComponent";
-import {RotateComponent} from "./TestComponents/RotateComponent";
-import {RotateScaleComponent} from "./TestComponents/RotateScaleComponent";
-import {RotateScaleClipComponent} from "./TestComponents/RotateScaleClipComponent";
-import {RotateScaleClipShadowComponent} from "./TestComponents/RotateScaleClipShadowComponent";
-import {RotateScaleClipShadowBackgroundComponent} from "./TestComponents/RotateScaleClipShadowBackgroundComponent";
+import {TestComponent} from "./TestComponent";
 export const defTimer = 2000;
 export const testAttempts = 3;
 
@@ -24,27 +9,104 @@ const skip = 1;
 const testLength = 15;
 const tests = [
     {
-      name : '',
+        name : '',
         comp : <Start />,
         timed : false,
-        titled : false
+        titled : false,
+        isTest : false
     },
-    // SHADOW
     {
+        outer : ' ',
+        inner : ' rotate',
+        doClip : false,
+        isTest : true,
+        name : 'Rotate Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' ',
+        inner : ' scale',
+        doClip : false,
+        isTest : true,
+        name : 'Scale Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' ',
+        inner : ' rotatescale',
+        doClip : false,
+        isTest : true,
+        name : 'Scale + Rotate Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' shadow',
+        inner : ' ',
+        doClip : false,
+        isTest : true,
         name : 'Drop Shadow Test',
-        comp : <ShadowComponent />,
         timed : true,
         titled : true
     },
-    /*
     {
-        name : 'Translate Test',
-        comp : <TranslateComponent />,
+        outer : ' shadow',
+        inner : ' scale',
+        doClip : false,
+        isTest : true,
+        name : 'Shadow + Scale Test',
         timed : true,
         titled : true
-     },
-     */
-    // CLIP
+    },
+    {
+        outer : ' shadow',
+        inner : ' rotatescale',
+        doClip : false,
+        isTest : true,
+        name : 'Shadow + Scale + Rotate Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' ',
+        inner : ' bkg',
+        doClip : false,
+        isTest : true,
+        name : 'Background Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' shadow',
+        inner : ' bkg',
+        doClip : false,
+        isTest : true,
+        name : 'Background + Shadow Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' shadow',
+        inner : ' bkg scale',
+        doClip : false,
+        isTest : true,
+        name : 'Background + Shadow + Scale Test',
+        timed : true,
+        titled : true
+    },
+    {
+        outer : ' shadow',
+        inner : ' bkg rotatescale',
+        doClip : false,
+        isTest : true,
+        name : 'Background + Shadow + Scale + Rotate Test',
+        timed : true,
+        titled : true
+    },
+
+    /*
     {
         name : 'Clip Path Test',
         comp : <ClipComponent />,
@@ -52,91 +114,18 @@ const tests = [
         titled : true
     },
     {
-        name : 'Clip + Shadow Test',
-        comp : <ClipShadowComponent />,
-        timed : true,
-        titled : true
-    },
-    // SCALE
-    {
-        name : 'Scale Test',
-        comp : <ScaleComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Scale + Clip Test',
-        comp : <ScaleClipComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Scale + Clip + Shadow Test',
-        comp : <ScaleClipShadowComponent />,
-        timed : true,
-        titled : true
-    },
-    // BACKGROUND
-    {
         name : 'Background Test',
         comp : <BackgroundComponent />,
         timed : true,
         titled : true
     },
+    */
     {
-        name : 'Background + Scale Test',
-        comp : <BackgroundScaleComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Background + Scale + Clip Test',
-        comp : <BackgroundScaleClipComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Background + Scale + Clip + Shadow Test',
-        comp : <BackgroundScaleClipShadowComponent />,
-        timed : true,
-        titled : true
-    },
-    // ROTATE
-    {
-        name : 'Rotate Test',
-        comp : <RotateComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Rotate + Scale Test',
-        comp : <RotateScaleComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Rotate + Scale + Clip Test',
-        comp : <RotateScaleClipComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Rotate + Scale + Clip + Shadow Test',
-        comp : <RotateScaleClipShadowComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : 'Rotate + Scale + Clip + Shadow + Background Test',
-        comp : <RotateScaleClipShadowBackgroundComponent />,
-        timed : true,
-        titled : true
-    },
-    {
-        name : '',
-        comp : <End />,
-        timed : false,
-        titled : false
+        name: '',
+        comp: <End/>,
+        timed: false,
+        titled: false,
+        isTest : false
     }
 ];
 
@@ -185,6 +174,7 @@ export class MainComponent extends Component {
 
     render() {
         const {progress : p, currentTest : t} = this.state;
+        const {outer, inner, doClip} = tests[t];
 
         return (
             <div>
@@ -195,9 +185,11 @@ export class MainComponent extends Component {
                         ''
                     }
                 </div>
-
-                {tests[t].comp}
-
+                { tests[t].isTest ?
+                    <TestComponent testData={{outer, inner, testNum: t, doClip}}/>
+                    :
+                    tests[t].comp
+                }
                 <div className='bar' style={{"width" : (((p/testLength)*100)+'%')}}>
                     <div className='progress'>
                     </div>

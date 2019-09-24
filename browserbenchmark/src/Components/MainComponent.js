@@ -35,7 +35,7 @@ const tests = [
     },
     {
         outer : ' ',
-        inner : ' rotatescale',
+        inner : ' rotate scale',
         doClip : false,
         isTest : true,
         name : 'Scale + Rotate Test',
@@ -62,7 +62,7 @@ const tests = [
     },
     {
         outer : ' shadow',
-        inner : ' rotatescale',
+        inner : ' rotate scale',
         doClip : false,
         isTest : true,
         name : 'Shadow + Scale + Rotate Test',
@@ -98,7 +98,7 @@ const tests = [
     },
     {
         outer : ' shadow',
-        inner : ' bkg rotatescale',
+        inner : ' bkg rotate scale',
         doClip : false,
         isTest : true,
         name : 'Background + Shadow + Scale + Rotate Test',

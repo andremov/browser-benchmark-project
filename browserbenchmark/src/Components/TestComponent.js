@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import cat from '../cat.jpg';
 import {defTimer, testAttempts} from "./MainComponent";
 
 export class TestComponent extends Component {
@@ -10,20 +10,23 @@ export class TestComponent extends Component {
         testStringOuter : ' ',
         testStringInner : ' ',
         testNum : -1,
-        doClip : false
+        doClip : false,
+        doCat : false,
+        doMulti : false
     };
 
     componentDidUpdate() {
-        if (this.state.testNum !== this.props.testData.testNum) {
-            const {testNum, outer, inner, doClip} = this.props.testData;
-            this.setState({
-                attempts : testAttempts,
-                style : false,
-                testNum,
-                testStringOuter : outer,
-                testStringInner : inner,
-                doClip
-            });
+        if (this.state.testNum !== this.props.testNum) {
+            const num = this.props.testNum;
+            let testData = this.props.testData;
+            testData.testNum = num;
+            testData.attempts = testAttempts;
+
+            this.setState(
+
+                    testData
+
+            );
 
             setTimeout(this.swapStyle, defTimer);
         }
@@ -47,14 +50,58 @@ export class TestComponent extends Component {
     };
 
     render() {
-        const {style, testStringOuter, testStringInner, doClip} = this.state;
-        console.log(this.state);
+        const {style, testStringOuter, testStringInner, doClip, doCat, doMulti} = this.state;
+
 
         return (
             <div className="test">
                 <div className={'transition-object'+(style? testStringOuter : '')}>
-                    <div className={'object '+(doClip? ' clip' : '')+(style? testStringInner : '')}>
-                    </div>
+                    {
+                        !doCat?
+                            <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                            </div>
+                            :
+                            <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                    }
+
+                    {
+                        doMulti ?
+                            (
+                                !doCat?
+                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                    </div>
+                                    :
+                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                            )
+                            :
+                            ''
+                    }
+
+                    {
+                        doMulti ?
+                            (
+                                !doCat?
+                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                    </div>
+                                    :
+                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                            )
+                            :
+                            ''
+                    }
+
+                    {
+                        doMulti ?
+                            (
+                                !doCat?
+                                    <div className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')}>
+                                    </div>
+                                    :
+                                    <img src={cat} alt='img' className={'object ' + (doClip ? ' clip' : '') + (style ? testStringInner : '')} />
+                            )
+                            :
+                            ''
+                    }
                 </div>
             </div>
         );

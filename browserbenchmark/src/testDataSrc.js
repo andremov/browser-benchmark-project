@@ -22,7 +22,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -35,7 +35,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -48,7 +48,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -61,7 +61,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -76,7 +76,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -89,7 +89,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -102,7 +102,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -116,7 +116,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -129,7 +129,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -143,7 +143,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -158,7 +158,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -171,7 +171,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -184,7 +184,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -197,7 +197,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg  scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -212,7 +212,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -228,7 +228,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -241,7 +241,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -254,7 +254,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -267,7 +267,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -282,7 +282,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -295,7 +295,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -308,7 +308,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -322,7 +322,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -335,7 +335,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -349,7 +349,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -364,7 +364,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -377,7 +377,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -390,7 +390,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -403,7 +403,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg  scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -418,7 +418,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : false
         }
     },
@@ -434,7 +434,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -447,7 +447,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -460,20 +460,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -488,7 +475,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -501,20 +488,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Rotate + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' rotate bkg',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -528,34 +502,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' scale bkg',
-            doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-
-    {
-        name : 'Cat + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -570,61 +517,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Rotate + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg rotate scale',
-            doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Rotate + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate',
-            doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Cat + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg  scale',
-            doClip : false,
-            doCat : true,
-            doMulti : false
-        }
-    },
-
-    // TETRIPLES
-    {
-        name : 'Cat + Rotate + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate scale',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -640,7 +533,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -653,7 +546,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -666,20 +559,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Clip + Cat + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg',
-            doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -694,7 +574,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
@@ -707,24 +587,10 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
-    {
-        name : 'Clip + Cat + Rotate + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' rotate bkg',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-
     {
         name : 'Clip + Cat + Scale + Shadow Test',
         isTest : true,
@@ -734,37 +600,11 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Clip + Cat + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' scale bkg',
-            doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
 
-    {
-        name : 'Clip + Cat + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
 
     // TRIPLES
     {
@@ -776,66 +616,10 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : false
         }
     },
-    {
-        name : 'Clip + Cat + Rotate + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg rotate scale',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Clip + Cat + Rotate + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-    {
-        name : 'Clip + Cat + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg  scale',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-
-    // TETRIPLES
-    {
-        name : 'Clip + Cat + Rotate + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate scale',
-            doClip : true,
-            doCat : true,
-            doMulti : false
-        }
-    },
-
-
 
 
     // MULTI
@@ -849,7 +633,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -862,7 +646,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -875,7 +659,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -888,7 +672,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -903,7 +687,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -916,7 +700,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -929,7 +713,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -943,7 +727,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -956,7 +740,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -970,7 +754,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -985,7 +769,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -998,7 +782,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1011,7 +795,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1024,7 +808,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg  scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1039,7 +823,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate scale',
             doClip : false,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1055,7 +839,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1068,7 +852,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1081,7 +865,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1094,7 +878,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1109,7 +893,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1122,7 +906,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1135,7 +919,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1149,7 +933,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1162,7 +946,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1176,7 +960,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1191,7 +975,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1204,7 +988,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' bkg rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1217,7 +1001,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1230,7 +1014,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg  scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1245,7 +1029,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' bkg rotate scale',
             doClip : true,
-            doCat : false,
+            doCat : false, doFilter : false,
             doMulti : true
         }
     },
@@ -1261,7 +1045,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1274,7 +1058,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1287,20 +1071,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Cat + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1315,7 +1086,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1328,20 +1099,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Cat + Rotate + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' rotate bkg',
-            doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1355,38 +1113,11 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
-    {
-        name : 'Multi + Cat + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' scale bkg',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
-    {
-        name : 'Multi + Cat + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
+    
     // TRIPLES
     {
         name : 'Multi + Cat + Rotate + Scale + Shadow Test',
@@ -1397,65 +1128,10 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : false,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
-    {
-        name : 'Multi + Cat + Rotate + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg rotate scale',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Cat + Rotate + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Cat + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg  scale',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
-    // TETRIPLES
-    {
-        name : 'Multi + Cat + Rotate + Scale + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate scale',
-            doClip : false,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
     // CATTO + CLIP
     // SINGLES
     {
@@ -1467,7 +1143,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1480,7 +1156,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1493,24 +1169,11 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' ',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
-    {
-        name : 'Multi + Clip + Cat + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' bkg',
-            doClip : true,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
+    
     // DOUBLES
     {
         name : 'Multi + Clip + Cat + Rotate + Scale Test',
@@ -1521,7 +1184,7 @@ export const testDB = [
             testStringOuter : ' ',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1534,20 +1197,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate ',
             doClip : true,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Clip + Cat + Rotate + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' rotate bkg',
-            doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1561,34 +1211,7 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' scale',
             doClip : true,
-            doCat : true,
-            doMulti : true
-        }
-    },
-    {
-        name : 'Multi + Clip + Cat + Scale + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' ',
-            testStringInner : ' scale bkg',
-            doClip : true,
-            doCat : true,
-            doMulti : true
-        }
-    },
-
-    {
-        name : 'Multi + Clip + Cat + Shadow + Background Test',
-        isTest : true,
-        timed : true,
-        titled : true,
-        testData : {
-            testStringOuter : ' shadow',
-            testStringInner : ' bkg',
-            doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
@@ -1603,64 +1226,410 @@ export const testDB = [
             testStringOuter : ' shadow',
             testStringInner : ' rotate scale',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : false,
             doMulti : true
         }
     },
+
+
+
+    // CATTO
+    // SINGLES
     {
-        name : 'Multi + Clip + Cat + Rotate + Scale + Background Test',
+        name : 'Cat + Rotate Test',
         isTest : true,
         timed : true,
         titled : true,
         testData : {
             testStringOuter : ' ',
-            testStringInner : ' bkg rotate scale',
-            doClip : true,
-            doCat : true,
-            doMulti : true
+            testStringInner : ' rotate filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
         }
     },
     {
-        name : 'Multi + Clip + Cat + Rotate + Shadow + Background Test',
+        name : 'Cat + Scale Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+    {
+        name : 'Cat + Shadow Test',
         isTest : true,
         timed : true,
         titled : true,
         testData : {
             testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate',
-            doClip : true,
-            doCat : true,
-            doMulti : true
+            testStringInner : ' filter ',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+    // DOUBLES
+    {
+        name : 'Cat + Rotate + Scale Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
         }
     },
     {
-        name : 'Multi + Clip + Cat + Scale + Shadow + Background Test',
+        name : 'Cat + Rotate + Shadow Test',
         isTest : true,
         timed : true,
         titled : true,
         testData : {
             testStringOuter : ' shadow',
-            testStringInner : ' bkg  scale',
+            testStringInner : ' rotate filter ',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+    {
+        name : 'Cat + Scale + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+    // TRIPLES
+    {
+        name : 'Cat + Rotate + Scale + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+    // CATTO + CLIP
+    // SINGLES
+    {
+        name : 'Clip + Cat + Rotate Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate filter',
             doClip : true,
-            doCat : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+    {
+        name : 'Clip + Cat + Scale Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+    {
+        name : 'Clip + Cat + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow filter',
+            testStringInner : ' ',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+    // DOUBLES
+    {
+        name : 'Clip + Cat + Rotate + Scale Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+    {
+        name : 'Clip + Cat + Rotate + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate  filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+    {
+        name : 'Clip + Cat + Scale + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+
+    // TRIPLES
+    {
+        name : 'Clip + Cat + Rotate + Scale + Shadow Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : false
+        }
+    },
+
+
+
+    // CATTO
+    // SINGLES
+    {
+        name : 'Multi + Cat + Rotate + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Cat + Scale + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Cat + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : '  filter',
+            doClip : false,
+            doCat : true, doFilter : true,
             doMulti : true
         }
     },
 
-    // TETRIPLES
+    // DOUBLES
     {
-        name : 'Multi + Clip + Cat + Rotate + Scale + Shadow + Background Test',
+        name : 'Multi + Cat + Rotate + Scale + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Cat + Rotate + Shadow + Filter Test',
         isTest : true,
         timed : true,
         titled : true,
         testData : {
             testStringOuter : ' shadow',
-            testStringInner : ' bkg rotate scale',
-            doClip : true,
-            doCat : true,
+            testStringInner : ' rotate filter ',
+            doClip : false,
+            doCat : true, doFilter : true,
             doMulti : true
         }
     },
+
+    {
+        name : 'Multi + Cat + Scale + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+
+    // TRIPLES
+    {
+        name : 'Multi + Cat + Rotate + Scale + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate scale filter',
+            doClip : false,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    // CATTO + CLIP
+    // SINGLES
+    {
+        name : 'Multi + Clip + Cat + Rotate + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Clip + Cat + Scale + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Clip + Cat + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow ',
+            testStringInner : ' filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+
+    // DOUBLES
+    {
+        name : 'Multi + Clip + Cat + Rotate + Scale + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' ',
+            testStringInner : ' rotate scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+    {
+        name : 'Multi + Clip + Cat + Rotate + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate filter ',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+
+    {
+        name : 'Multi + Clip + Cat + Scale + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+
+    // TRIPLES
+    {
+        name : 'Multi + Clip + Cat + Rotate + Scale + Shadow + Filter Test',
+        isTest : true,
+        timed : true,
+        titled : true,
+        testData : {
+            testStringOuter : ' shadow',
+            testStringInner : ' rotate scale filter',
+            doClip : true,
+            doCat : true, doFilter : true,
+            doMulti : true
+        }
+    },
+
 
 
     // END

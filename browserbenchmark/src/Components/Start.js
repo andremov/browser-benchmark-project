@@ -11,6 +11,8 @@ export class Start extends Component {
         doImg : true,
         doNoClip : false,
         doClip : true,
+        doNoFilter : false,
+        doFilter : true,
         shaking : ''
     };
 
@@ -21,6 +23,11 @@ export class Start extends Component {
         this.toggleMulti = this.toggleMulti.bind(this);
         this.toggleBlock = this.toggleBlock.bind(this);
         this.toggleImg = this.toggleImg.bind(this);
+        this.toggleClip = this.toggleClip.bind(this);
+        this.toggleNoClip = this.toggleNoClip.bind(this);
+        this.toggleFilter = this.toggleFilter.bind(this);
+        this.toggleNoFilter = this.toggleNoFilter.bind(this);
+
         this.resetShake = this.resetShake.bind(this);
 
     }
@@ -45,7 +52,7 @@ export class Start extends Component {
             })
         } else {
             this.setState({
-                shaking: 'single'
+                shaking: 'multi'
             });
         }
         this.callReset();
@@ -71,7 +78,7 @@ export class Start extends Component {
             })
         } else {
             this.setState({
-                shaking: 'block'
+                shaking: 'img'
             });
         }
         this.callReset();
@@ -97,7 +104,33 @@ export class Start extends Component {
             })
         } else {
             this.setState({
-                shaking: 'noclip'
+                shaking: 'clip'
+            });
+        }
+        this.callReset();
+    };
+
+    toggleNoFilter = event => {
+        if (this.state.doFilter) {
+            this.setState({
+                doNoFilter: !this.state.doNoFilter
+            })
+        } else {
+            this.setState({
+                shaking: 'filter'
+            });
+        }
+        this.callReset();
+    };
+
+    toggleFilter = event => {
+        if (this.state.doNoFilter) {
+            this.setState({
+                doFilter: !this.state.doFilter
+            })
+        } else {
+            this.setState({
+                shaking: 'filter'
             });
         }
         this.callReset();
@@ -108,8 +141,8 @@ export class Start extends Component {
     }
 
     resetShake() {
-        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip} = this.state;
-        window.mainComponent.changeParameters(doSingle, doMulti, doBlock, doImg, doClip, doNoClip);
+        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter} = this.state;
+        window.mainComponent.changeParameters(doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter);
 
         this.setState({
           shaking: ''
@@ -117,7 +150,7 @@ export class Start extends Component {
     }
 
     fetchTotalTests() {
-        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip} = this.state;
+        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter} = this.state;
         let c = 0;
         for (let i = 0; i < testDB.length; i++) {
 
@@ -144,6 +177,12 @@ export class Start extends Component {
             if (!testData.doClip && !doNoClip)
                 continue;
 
+            if (testData.doFilter && !doFilter)
+                continue;
+
+            if (!testData.doFilter && !doNoFilter)
+                continue;
+
             c++;
         }
 
@@ -156,7 +195,7 @@ export class Start extends Component {
     };
 
     render() {
-        const {doSingle, doMulti, doBlock, doImg, shaking, doClip, doNoClip} = this.state;
+        const {doSingle, doMulti, doBlock, doImg, shaking, doClip, doNoClip, doFilter, doNoFilter} = this.state;
         const total = this.fetchTotalTests();
         const duration = total * testLength;
         const durationM = Math.floor( duration / 60);
@@ -165,25 +204,13 @@ export class Start extends Component {
         return (
             <div className="test column">
 
-                <div className={'option '+(shaking === 'single'? ' shake' : '')}>
-                    <span>Single object?</span>
-                    <div onClick={this.toggleSingle} className={'toggle '+ (doSingle? 'enabled' : 'disabled')}>
-                        <div className='switch'>
-                        </div>
-                    </div>
-                </div>
-
                 <div className={'option '+(shaking === 'multi'? ' shake' : '')}>
                     <span>Multiple objects?</span>
-                    <div onClick={this.toggleMulti} className={'toggle '+ (doMulti? 'enabled' : 'disabled')}>
+                    <div onClick={this.toggleSingle} className={'toggle no '+ (doSingle? 'enabled' : 'disabled')}>
                         <div className='switch'>
                         </div>
                     </div>
-                </div>
-
-                <div className={'option '+(shaking === 'block'? ' shake' : '')}>
-                    <span>Block object?</span>
-                    <div onClick={this.toggleBlock} className={'toggle '+ (doBlock? 'enabled' : 'disabled')}>
+                    <div onClick={this.toggleMulti} className={'toggle yes '+ (doMulti? 'enabled' : 'disabled')}>
                         <div className='switch'>
                         </div>
                     </div>
@@ -191,15 +218,11 @@ export class Start extends Component {
 
                 <div className={'option '+(shaking === 'img'? ' shake' : '')}>
                     <span>Image object?</span>
-                    <div onClick={this.toggleImg} className={'toggle '+ (doImg? 'enabled' : 'disabled')}>
+                    <div onClick={this.toggleBlock} className={'toggle no '+ (doBlock? 'enabled' : 'disabled')}>
                         <div className='switch'>
                         </div>
                     </div>
-                </div>
-
-                <div className={'option '+(shaking === 'noclip'? ' shake' : '')}>
-                    <span>No clipped object?</span>
-                    <div onClick={this.toggleNoClip} className={'toggle '+ (doNoClip? 'enabled' : 'disabled')}>
+                    <div onClick={this.toggleImg} className={'toggle yes '+ (doImg? 'enabled' : 'disabled')}>
                         <div className='switch'>
                         </div>
                     </div>
@@ -207,7 +230,24 @@ export class Start extends Component {
 
                 <div className={'option '+(shaking === 'clip'? ' shake' : '')}>
                     <span>Clipped object?</span>
-                    <div onClick={this.toggleClip} className={'toggle '+ (doClip? 'enabled' : 'disabled')}>
+                    <div onClick={this.toggleNoClip} className={'toggle no '+ (doNoClip? 'enabled' : 'disabled')}>
+                        <div className='switch'>
+                        </div>
+                    </div>
+                    <div onClick={this.toggleClip} className={'toggle yes '+ (doClip? 'enabled' : 'disabled')}>
+                        <div className='switch'>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className={'option '+(shaking === 'filter'? ' shake' : '')}>
+                    <span>Filter object?</span>
+                    <div onClick={this.toggleNoFilter} className={'toggle no '+ (doNoFilter? 'enabled' : 'disabled')}>
+                        <div className='switch'>
+                        </div>
+                    </div>
+                    <div onClick={this.toggleFilter} className={'toggle yes '+ (doFilter? 'enabled' : 'disabled')}>
                         <div className='switch'>
                         </div>
                     </div>

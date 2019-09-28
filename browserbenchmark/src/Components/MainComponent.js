@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import {TestComponent} from "./TestComponent";
 import {testDB} from "../testDataSrc";
+import {StatsComponent} from "./StatsComponent";
 
-export const defTimer = 750;
-export const testAttempts = 3;
+export const preTestTime = 500;
+export const styleSwapTimer = 500;
+export const timeoutTimer = 500;
+export const testAttempts = 2;
 export const testLength = 5;
 
 const skip = 1;
@@ -18,7 +21,9 @@ export class MainComponent extends Component {
         doBlock : false,
         doImg : true,
         doNoClip : false,
-        doClip : true
+        doClip : true,
+        doNoFilter : false,
+        doFilter : true
     };
 
     constructor(props, context) {
@@ -57,7 +62,7 @@ export class MainComponent extends Component {
     };
 
     getNextTest(current) {
-        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip} = this.state;
+        const {doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter} = this.state;
         let next;
         let found = false;
 
@@ -82,6 +87,12 @@ export class MainComponent extends Component {
             if (!testData.doClip && !doNoClip)
                 continue;
 
+            if (testData.doFilter && !doFilter)
+                continue;
+
+            if (!testData.doFilter && !doNoFilter)
+                continue;
+
 
             found = true;
             break;
@@ -93,9 +104,9 @@ export class MainComponent extends Component {
         return next;
     }
 
-    changeParameters = (doSingle, doMulti, doBlock, doImg, doClip, doNoClip) => {
+    changeParameters = (doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter) => {
         this.setState({
-            doSingle, doMulti, doBlock, doImg, doClip, doNoClip
+            doSingle, doMulti, doBlock, doImg, doClip, doNoClip, doFilter, doNoFilter
         })
     };
 
@@ -121,13 +132,13 @@ export class MainComponent extends Component {
                 </div>
 
                 { testDB[t].isTest ?
-                    <TestComponent testData={testData} testNum={t}/>
+                    <TestComponent testData={testData} testNum={t} testName={testDB[t].name}/>
                     :
                     testDB[t].comp
                 }
 
-                <div className='bar' style={{"width" : (((p/testLength)*100)+'%')}}>
-                    <div className='progress'>
+                <div className='progress' style={{"width" : (((p/testLength)*100)+'%')}}>
+                    <div className='bar'>
                     </div>
                 </div>
 
@@ -136,6 +147,8 @@ export class MainComponent extends Component {
                     <span className='names'>Mario Donato, Jose Luis Martinez, y Andrés Movilla.</span>
                     <span className='year'>2019.</span>
                 </div>
+
+                <StatsComponent />
             </div>
         );
     }

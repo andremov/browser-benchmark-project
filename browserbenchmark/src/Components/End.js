@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 
 export class End extends Component {
+
     action = event => {
         event.preventDefault();
 
         window.mainComponent.setTestNumber(0);
     };
+
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        /*
+        console.log(performance.getEntriesByType("measure"));
+         */
+    }
 
     render() {
         return (

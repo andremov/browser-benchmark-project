@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import cat from '../cat.jpg';
-import {defTimer, testAttempts} from "./MainComponent";
+import {styleSwapTimer, testAttempts, preTestTime, timeoutTimer} from "./MainComponent";
+/*
+import {Stats} from "../Stats";
+var stats = new Stats();
+document.body.appendChild( stats.dom );
+
+ */
 
 export class TestComponent extends Component {
 
@@ -15,22 +21,53 @@ export class TestComponent extends Component {
         doMulti : false
     };
 
+
+    componentDidMount() {
+        /*
+        stats.showPanel( 0 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+        stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+         */
+    }
+
     componentDidUpdate() {
         if (this.state.testNum !== this.props.testNum) {
             const num = this.props.testNum;
+            const testName = this.props.testName;
             let testData = this.props.testData;
             testData.testNum = num;
+            testData.testName = testName;
             testData.attempts = testAttempts;
 
             this.setState(
-
-                    testData
-
+                testData
             );
 
-            setTimeout(this.swapStyle, defTimer);
+            /*
+            En {preTestTime} cambia el estilo por primera vez
+             */
+
+            setTimeout(this.callStartMark, 100);
+            setTimeout(this.swapStyle, preTestTime);
         }
     }
+
+    callStartMark = () => {
+        /*
+        console.log('start mark!');
+        stats.begin();
+        performance.mark(this.state.testName + ' start');
+         */
+    };
+
+    callEndMark = () => {
+        /*
+        console.log('end mark!');
+        stats.end();
+        performance.mark(this.state.testName + ' end');
+        performance.measure("measure test #"+this.state.testNum,this.state.testName + ' start',this.state.testName + ' end');
+        console.log(performance.getEntriesByType("measure"));
+         */
+    };
 
     swapStyle = () => {
         let {style, attempts} = this.state;
@@ -40,8 +77,10 @@ export class TestComponent extends Component {
             attempts --;
         }
 
-        if (attempts !== 0) {
-            setTimeout(this.swapStyle, defTimer);
+        if (attempts > 0) {
+            setTimeout(this.swapStyle, styleSwapTimer+timeoutTimer);
+        } else {
+            setTimeout(this.callEndMark, styleSwapTimer+100);
         }
 
         this.setState( {
@@ -55,6 +94,9 @@ export class TestComponent extends Component {
 
         return (
             <div className="test">
+
+
+
                 <div className={'transition-object'+(style? testStringOuter : '')}>
                     {
                         !doCat?

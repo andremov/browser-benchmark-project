@@ -52,7 +52,7 @@ body {
   }
 }
 
-.bar {
+.progress {
   position: absolute;
   display: block;
   height: 50px;
@@ -64,7 +64,7 @@ body {
   transition: 1.0s;
   transition-timing-function: linear;
 
-  .progress {
+  .bar {
     background-color: #09d3ac;
     height: 50px;
   }
@@ -144,29 +144,44 @@ a {
 
     .toggle {
       display: block;
-      border-radius: 1em;
-      width: 2em;
+      border-radius: 0.9em;
+      width: 1em;
       height: 1em;
-      padding: 0.1em;
+      padding: 0.2em;
       box-sizing: border-box;
-      background-color: #282c34;
+
 
       cursor: pointer;
       transition: 0.5s;
 
+      &.yes {
+        &.enabled {
+          background-color: #09d3ac;
+        }
+        &.disabled {
+          background-color: #045c4b;
+        }
+      }
 
-      &.enabled {
-        background-color: #09d3ac;
+      &.no {
+        &.enabled {
+          background-color: #cf3f0a;
+        }
+        &.disabled {
+          background-color: #6f2105;
+        }
+      }
 
+      &.disabled {
         .switch {
-          transform: translate(130%,0);
+          opacity: 0;
         }
       }
 
       .switch {
         display: block;
-        width: 0.8em;
-        height: 0.8em;
+        width: 0.6em;
+        height: 0.6em;
         background-color: aliceblue;
         border-radius: 0.9em;
         transition: 0.25s;
@@ -202,6 +217,10 @@ a {
   transform: scale(4.7);
 }
 
+.filter {
+  filter: sepia(75%);
+}
+
 .rotate {
   transform: rotate(375deg);
 }
@@ -234,4 +253,80 @@ a {
 
 img {
   border-radius: 5%;
+}
+
+.all-graphs {
+  background-color: #191c21;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.graph {
+  flex-grow: 1;
+  height: 30vh;
+
+  border-radius: 10px;
+  margin: 10px;
+  overflow: hidden;
+
+  background-color: rgba(0,0,0,0.25);
+
+  .info {
+    width: 99%;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    color: rgba(255,255,255,0.5);
+
+    span {
+      text-align: right;
+    }
+  }
+
+  .title {
+    height: 0;
+    color: rgba(255,255,255,0.25);
+    line-height: 0;
+    font-weight: bold;
+    transform: translate(10px,15px);
+  }
+
+  .plot-area {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    .bar {
+      display: block;
+      width: 1%;
+      height: 1%;
+    }
+
+    &.fps {
+      background-color: #002;
+
+      .bar {
+        background-color: #0ff;
+      }
+    }
+
+    &.ms {
+      background-color: #020;
+
+      .bar {
+        background-color: #0f0;
+      }
+    }
+
+    &.mem {
+      background-color: #201;
+
+      .bar {
+        background-color: #f08;
+      }
+    }
+  }
 }

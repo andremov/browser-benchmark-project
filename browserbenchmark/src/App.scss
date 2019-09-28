@@ -101,6 +101,79 @@ a {
   font-size: calc(10px + 2vmin);
   color: white;
 
+
+  &.column {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @keyframes shake-toggle {
+    0% {
+      transform: translate(0,0);
+    }
+    25% {
+      transform: translate(-20px,0);
+    }
+    50% {
+      transform: translate(20px,0);
+    }
+    75% {
+      transform: translate(-20px,0);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+  .option {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 2px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  space-between;
+
+    &.shake {
+      animation-name: shake-toggle;
+      animation-duration: 0.5s;
+    }
+
+    .toggle {
+      display: block;
+      border-radius: 1em;
+      width: 2em;
+      height: 1em;
+      padding: 0.1em;
+      box-sizing: border-box;
+      background-color: #282c34;
+
+      cursor: pointer;
+      transition: 0.5s;
+
+
+      &.enabled {
+        background-color: #09d3ac;
+
+        .switch {
+          transform: translate(130%,0);
+        }
+      }
+
+      .switch {
+        display: block;
+        width: 0.8em;
+        height: 0.8em;
+        background-color: aliceblue;
+        border-radius: 0.9em;
+        transition: 0.25s;
+      }
+    }
+  }
+
   .object {
     background-color: #ff9d3b;
     width: 100px;

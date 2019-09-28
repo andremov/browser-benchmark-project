@@ -9,7 +9,7 @@ export class End extends Component {
 
     render() {
         return (
-            <div className="test">
+            <div className="test column">
                 Finished.
 
                 <div onClick={this.action} className="btn">

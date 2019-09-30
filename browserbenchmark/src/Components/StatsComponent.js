@@ -110,6 +110,13 @@ export class StatsComponent extends Component {
         })
     };
 
+    componentDidUpdate() {
+        if (this.props.requestResults) {
+            const {memData, msData, fpsData} = this.state;
+            this.props.sendResults( memData, msData, fpsData );
+        }
+    }
+
     render() {
         const {memData, msData, fpsData} = this.state;
         const {minMem, maxMem, sumMem} = this.state;
@@ -117,8 +124,6 @@ export class StatsComponent extends Component {
         const {minFps, maxFps, sumFps} = this.state;
         
         const places = 3;
-        
-        console.log(fpsData);
 
         return (
             <div className='all-graphs'>
@@ -130,11 +135,15 @@ export class StatsComponent extends Component {
                         <span>Min: {(minFps).toFixed(places)}frames</span>
                         <span>Avg: {(sumFps/fpsData.length).toFixed(places)}frames</span>
                         <span>Max: {(maxFps).toFixed(places)}frames</span>
+                        { fpsData.length > 0?
+                            <span>Current: {(fpsData[fpsData.length-1].current).toFixed(places)}frames</span> :
+                            ''
+                        }
                     </div>
 
                     <div className='plot-area fps'>
                         {fpsData.slice(-100).map (item => { return(
-                            <div className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
+                            <div key={fpsData.indexOf(item)} className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
                             </div>
                         )})}
                     </div>
@@ -148,11 +157,15 @@ export class StatsComponent extends Component {
                         <span>Min: {(minMem).toFixed(places)}MB</span>
                         <span>Avg: {(sumMem/memData.length).toFixed(places)}MB</span>
                         <span>Max: {(maxMem).toFixed(places)}MB</span>
+                        { memData.length > 0?
+                            <span>Current: {(memData[memData.length-1].current).toFixed(places)}MB</span> :
+                            ''
+                        }
                     </div>
 
                     <div className='plot-area mem'>
                         {memData.slice(-100).map (item => { return(
-                            <div className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
+                            <div key={memData.indexOf(item)} className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
                             </div>
                         )})}
                     </div>
@@ -166,11 +179,15 @@ export class StatsComponent extends Component {
                         <span>Min: {(minMs).toFixed(places)}ms</span>
                         <span>Avg: {(sumMs/msData.length).toFixed(places)}ms</span>
                         <span>Max: {(maxMs).toFixed(places)}ms</span>
+                        { msData.length > 0?
+                            <span>Current: {(msData[msData.length-1].current).toFixed(places)}ms</span> :
+                            ''
+                        }
                     </div>
 
                     <div className='plot-area ms'>
                         {msData.slice(-100).map (item => { return(
-                            <div className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
+                            <div key={msData.indexOf(item)} className='bar' style={{height : (item.current/item.limit)*100+'%'}}>
                             </div>
                         )})}
                     </div>

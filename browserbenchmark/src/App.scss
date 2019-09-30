@@ -70,6 +70,21 @@ body {
   }
 }
 
+.large-btn {
+  margin-top: 6vh;
+  background-color: #09d3ac;
+  padding: 1%;
+  border-radius: 5px;
+  width: 250px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+
+  &:hover{
+    background-color: #39ffdc;
+  }
+}
+
 .btn {
   margin-top: 6vh;
   background-color: #09d3ac;

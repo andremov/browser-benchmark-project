@@ -1,12 +1,9 @@
-import React from "react";
-import {Start} from "./Components/Start";
-import {End} from "./Components/End";
 
 export const testDB = [
     // START
     {
         name : '',
-        comp : <Start />,
+        last : false,
         timed : false,
         titled : false,
         isTest : false
@@ -1635,7 +1632,7 @@ export const testDB = [
     // END
     {
         name: '',
-        comp: <End/>,
+        last: true,
         timed: false,
         titled: false,
         isTest : false

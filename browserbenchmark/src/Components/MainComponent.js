@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {TestComponent} from "./TestComponent";
 import {testDB} from "../testDataSrc";
 import {StatsComponent} from "./StatsComponent";
+import {Start} from "./Start";
+import {End} from "./End";
 
 export const preTestTime = 500;
 export const styleSwapTimer = 500;
@@ -23,7 +25,10 @@ export class MainComponent extends Component {
         doNoClip : false,
         doClip : true,
         doNoFilter : false,
-        doFilter : true
+        doFilter : true,
+        results : {
+            received : false
+        }
     };
 
     constructor(props, context) {
@@ -117,9 +122,15 @@ export class MainComponent extends Component {
         })
     };
 
+    getResults = (mem, ms, fps ) => {
+        this.setState({results : {received: true,fps,mem,ms}});
+    };
+
     render() {
         const {progress : p, currentTest : t} = this.state;
+        const {results} = this.state;
         const {testData} = testDB[t];
+        const doResultRequest = t===testDB.length-1 && !this.state.results.received;
 
         return (
             <div>
@@ -134,7 +145,7 @@ export class MainComponent extends Component {
                 { testDB[t].isTest ?
                     <TestComponent testData={testData} testNum={t} testName={testDB[t].name}/>
                     :
-                    testDB[t].comp
+                    !testDB[t].last ? <Start/> : <End sendResults={results}/>
                 }
 
                 <div className='progress' style={{"width" : (((p/testLength)*100)+'%')}}>
@@ -148,7 +159,7 @@ export class MainComponent extends Component {
                     <span className='year'>2019.</span>
                 </div>
 
-                <StatsComponent />
+                <StatsComponent requestResults={doResultRequest} sendResults={this.getResults}/>
             </div>
         );
     }
